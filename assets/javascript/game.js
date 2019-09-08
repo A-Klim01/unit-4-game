@@ -1,8 +1,12 @@
 var wins= 0;
 var losses= 0;
-var random_results;
+var random_result;
+var previous= 0;
+var startgame;
 
-random_result = Math.floor(Math.random() * 60 ) + 30;
+var resetStartGame = function () {
+
+random_result = Math.floor(Math.random() * 69 ) + 30;
 
 console.log(random_result);
 
@@ -20,3 +24,31 @@ for(var i = 0; i < 4; i++){
     $(".crystal").append(crystal);
 }
 
+}
+
+startGame()
+
+$(".crystal").on('click', function () {
+
+    
+    
+    var num = parseInt($(this).attr('data-random'));
+
+    previous += num;
+
+    if( previous > random_result){
+       $("lost").html(losses)
+        
+       lost--;
+    }
+    else if(previous === random_result){
+        
+            win++;
+        $("#win").html(win)
+    }
+
+    
+
+ 
+    
+});
