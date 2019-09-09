@@ -26,7 +26,7 @@ for(var i = 0; i < 4; i++){
 
 }
 
-startGame()
+resetStartGame();
 
 $(".crystal").on('click', function () {
 
@@ -37,7 +37,7 @@ $(".crystal").on('click', function () {
     previous += num;
 
     if( previous > random_result){
-       $("lost").html(losses)
+       $("#lost").html(losses)
         
        lost--;
     }
