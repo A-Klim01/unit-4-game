@@ -8,7 +8,7 @@ var totalscore=0;
 var resetStartGame = function () {
     previous = 0;
     $('#user-score').text('Your current score: ' + previous)
-
+    //computer generated random number.
     random_result = Math.floor(Math.random() * 69 ) + 30;
     $("#result").html('Target Number:' + random_result);
     console.log(random_result);
